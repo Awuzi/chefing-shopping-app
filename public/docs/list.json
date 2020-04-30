@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "name": "Milk",
+    "quantity": 2,
+    "idDone": false
+  },
+  {
+    "id": 2,
+    "name": "Rice",
+    "quantity": 4,
+    "isDone": true
+  },
+  {
+    "id": 2,
+    "name": "Sugar",
+    "quantity": 4,
+    "isDone": false
+  }
+]

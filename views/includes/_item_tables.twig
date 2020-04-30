@@ -1,0 +1,26 @@
+<table class="col-md-6">
+    <tr>
+        <th>Name</th>
+        <th>Quantity</th>
+        <th colspan="2">Actions</th>
+    </tr>
+    {% for item in items %}
+        <tr>
+            <td>
+                {% if item.isDone %}
+                    <s><em>{{ item.name }}</em></s>
+                {% else %}
+                    <strong>{{ item.name }}</strong>
+                {% endif %}
+            </td>
+            <td> {% if item.isDone %}
+                    <s><em>x{{ item.quantity }}</em></s>
+                {% else %}
+                    <strong>x{{ item.quantity }}</strong>
+                {% endif %}</td>
+
+            <td><a href="/check/{{ item.id }}" class="btn btn-outline-success"><i class="fas fa-check"></i></a></td>
+            <td><a href="/delete/{{ item.id }}" class="btn btn-outline-danger"><i class="fa fa-trash"></i></a></td>
+        </tr>
+    {% endfor %}
+</table>

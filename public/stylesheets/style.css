@@ -1,0 +1,11 @@
+td {
+  padding: 1rem 1rem;
+}
+th {
+  padding: 1rem 1rem;
+  font-weight: 500;
+  font-size: 1.4rem;
+}
+tr {
+  text-align:center ;
+}
