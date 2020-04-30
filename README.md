@@ -1,4 +1,4 @@
-# Chefing - Shopping Aist App
+# Chefing - Shopping List App
 
 
 ## Project setup
