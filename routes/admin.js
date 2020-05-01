@@ -14,4 +14,9 @@ router.get('/', isLogged, async (req, res) => {
   });
 });
 
+router.get('/user/:id', isLogged, async (req, res) => {
+  await User.deleteOne({ _id: req.params.id });
+  res.redirect('/admin');
+});
+
 module.exports = router;
