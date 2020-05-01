@@ -1,10 +1,12 @@
-const mongoose = require("mongoose");
-const Schema = mongoose.Schema;
+const mongoose = require('mongoose');
+
+const { Schema } = mongoose;
 
 const ShoppingList = new Schema({
-    name: String,
-    quantity: Number,
-    isDone: Boolean
+  name: String,
+  quantity: { type: Number, default: 0 },
+  isDone: Boolean,
+  uid: String,
 });
 
-module.exports = mongoose.model("ShoppingList", ShoppingList);
+module.exports = mongoose.model('ShoppingList', ShoppingList);

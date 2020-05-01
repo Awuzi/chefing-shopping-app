@@ -1,6 +1,7 @@
 {% extends 'layout.twig' %}
 
 {% block body %}
+    {% include "includes/_navbar.twig" with user %}
     <div class="container mt-5 bg-light rounded">
         <h1 class="mb-4 pt-4">Chefing - Shopping List App</h1>
         <hr>
@@ -8,13 +9,13 @@
             <label for="item-name"></label>
             <div class="form-row">
                 <div class="col-4">
-                    <input type="text" id="item-name" class="form-control" name="item" placeholder="Add item to your shopping list" required>
+                    <input type="text" id="item-name" class="form-control" name="item" placeholder="Add item to your shopping list" required autofocus>
                 </div>
                 <div class="col-2">
-                    <input type="text" id="item-name" class="form-control" name="quantity" placeholder="Quantity" required>
+                    <input type="text" id="item-name" class="form-control" name="quantity" placeholder="Quantity">
                 </div>
                 <div class="col">
-                    <button type="submit" id="add" class="btn btn-info">Add +</button>
+                    <button type="submit" class="btn btn-info">Add +</button>
                 </div>
             </div>
         </form>
@@ -28,6 +29,6 @@
         {% endif %}
     </div>
     <footer class="container">
-        <i>Made by Yahia, code on my<a href="//github.com/awuzi/chefing-shopping-app" target="_blank">Github</a></i>
+        <i>Made by Yahia, code on my <a href="//github.com/awuzi/chefing-shopping-app" target="_blank">Github</a></i>
     </footer>
 {% endblock %}

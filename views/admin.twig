@@ -1,0 +1,13 @@
+{% extends 'layout.twig' %}
+
+{% block body %}
+    {% include "includes/_navbar.twig" with user %}
+
+    <div class="container mt-5 bg-light rounded">
+        <h1 class="mb-4 pt-4">Chefing - Users Management App</h1>
+        {% include 'includes/_user_table.twig' with users %}
+    </div>
+    <footer class="container">
+        <i>Made by Yahia, code on my <a href="//github.com/awuzi/chefing-shopping-app" target="_blank">Github</a></i>
+    </footer>
+{% endblock %}

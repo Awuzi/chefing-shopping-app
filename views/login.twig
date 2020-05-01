@@ -1,0 +1,19 @@
+{% extends 'layout.twig' %}
+{% block body %}
+    <div class="container col-md-4 mt-4 mb-3"><h3>Login</h3></div>
+    {% if error %}
+        <div class="container col-md-4 alert alert-danger">{{ error }}</div>
+    {% endif %}
+    <div class="container col-md-4">
+        <form method="post">
+            <div class="form-group">
+                <input type="text" name="username" class="form-control" placeholder="Login" autofocus>
+            </div>
+            <div class="form-group">
+                <input type="password" name="password" class="form-control" placeholder="Password">
+            </div>
+            <button type="submit" class="btn btn-outline-dark">Login</button>
+            <a href="/register" class="btn btn-dark">Register</a>
+        </form>
+    </div>
+{% endblock %}
