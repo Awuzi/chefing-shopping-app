@@ -3,18 +3,27 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "node ./bin/www",
+    "test": "jest"
   },
   "dependencies": {
+    "@jest/globals": "^25.5.2",
     "body-parser": "^1.19.0",
+    "cookie-parser": "~1.4.3",
     "debug": "^2.6.9",
     "express": "^4.17.1",
+    "express-session": "^1.17.0",
+    "http-errors": "^1.7.3",
     "mongodb": "^3.5.4",
     "mongoose": "^5.9.6",
     "morgan": "^1.10.0",
     "twig": "1.12.0"
   },
   "devDependencies": {
-    "http-errors": "^1.7.3"
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.1.0",
+    "eslint-plugin-import": "^2.20.2",
+    "jest": "^25.5.2",
+    "supertest": "^4.0.2"
   }
 }

@@ -1,0 +1,31 @@
+<table class="table">
+    <tr>
+        <th>Username</th>
+        <th>Password</th>
+        <th>Role</th>
+        <th colspan="2">Actions (not working)</th>
+    </tr>
+    {% for user in users %}
+        <tr>
+            <td><input type="text" name="username" class="form-control" value="{{ user.username }}"></td>
+            <td>*******</td>
+            <td>
+                <select name="role">
+                    {% if user.role == 'admin' %}
+                        <option value="{{ user.role }}" selected>{{ user.role }}</option>
+                        <option value="member">member</option>
+                    {% else %}
+                        <option value="{{ user.role }}" selected>{{ user.role }}</option>
+                        <option value="admin">admin</option>
+                    {% endif %}
+                </select>
+            </td>
+            <td>
+                <button type="submit" class="btn btn-info"><i class="fas fa-check"></i></button>
+            </td>
+            <td>
+                <button type="submit" class="btn btn-danger"><i class="fas fa-trash"></i></button>
+            </td>
+        </tr>
+    {% endfor %}
+</table>
